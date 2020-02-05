@@ -101,7 +101,7 @@
       const getMatches = (inputString, employeeNames) => {
           const leadingMatches = findLeadingMatches(inputString, employeeNames) || [];
           const remainingNames = employeeNames.filter(name => !leadingMatches.includes(name)) || [];
-          const containingMatches = findContainingMatches(inputString, remainingNames);
+          const containingMatches = findContainingMatches(inputString, remainingNames) || [];
 
           return { leadingMatches, containingMatches };
       };
