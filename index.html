@@ -127,11 +127,12 @@
 
               return `${firstList}${secondList}`;
           };
-          if (inputString.length === 0) {
+          const html =  getHtml(leadingMatches, containingMatches);
+          if (inputString.length === 0 || html === '') {
             suggestionsContainer.classList.add('hidden');
           } else {
             suggestionsContainer.classList.remove('hidden');
-            suggestions.innerHTML = getHtml(leadingMatches, containingMatches);
+            suggestions.innerHTML = html;
           }
       };
 
